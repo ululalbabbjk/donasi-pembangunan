@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Donatur;
+use App\Models\ValidasiDonasi;
 use Livewire\Component;
 
 class MakeDonation extends Component
@@ -48,8 +49,13 @@ class MakeDonation extends Component
             $donatur->no_telp = $this->notelp;
             $donatur->jumlah = $this->jumlahDonasi;
             $donatur->pesan = $this->doa;
-            if($donatur->save()){
-                $this->addError('pesan','Berhasil di input ke db');
+            $donatur->save();
+            $validasi = new ValidasiDonasi();
+            $validasi->id = $donatur->id;
+            $validasi->metode = $this->metodePembayaran;
+            $validasi->validated = false;
+            if($validasi->save()){
+                return redirect('/donasi/validate/'.$donatur->id);
             }
         }
     }

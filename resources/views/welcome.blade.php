@@ -13,8 +13,8 @@
                                     Bantu Pembangunan Pondok Pesantren Ulul Albab Bojongkoneng
                                 </h1>
                                 <p class="font-size-h5 font-w300 text-muted mb-2">
-                                    Begitu banyak anak-anak yatim dan dhuafa mengetuk pintu hati kita untuk memberikan harapan bahwa mereka bisa menggapai cita-cita mereka.
-                                </p>
+                                    Mari kita dukung bersama perjuangan Pesantren Ulul Albab dalam memenuhi hak-hak anak yatim
+                                    dan duafa terutama dalam penyediaan pendidikan yang layak dan berkualitas.                                </p>
                                 <p class="font-size-h2 mb-2 js-appear-enabled animated fadeIn" data-toggle="appear">
                                     Rp. 10.000
                                 </p>
@@ -82,16 +82,18 @@
         <div class="content content-full">
             <div class="py-5 push">
                 <h2 class="mb-2 text-center">
-                    Title #1
+                    Insya Allah dengan
+                    berpartisipasi dalam pembangunan fasilitas pendidikan tersebut akan menjadi sedekah jariyah yang
+                    akan terus mengalir pahalanya untuk kita.
                 </h2>
-                <h3 class="font-w300 text-muted mb-0 text-center">
-                    Subtitle
-                </h3>
+{{--                <h3 class="font-w300 text-muted mb-0 text-center">--}}
+{{--                    Subtitle--}}
+{{--                </h3>--}}
             </div>
-            <div class="text-center">
-                <p>
-                    Your content..
-                </p>
+{{--            <div class="text-center">--}}
+{{--                <p>--}}
+{{--                    --}}
+{{--                </p>--}}
             </div>
         </div>
     </div>

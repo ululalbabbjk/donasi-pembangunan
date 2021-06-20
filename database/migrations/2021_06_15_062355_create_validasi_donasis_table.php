@@ -15,7 +15,7 @@ class CreateValidasiDonasisTable extends Migration
     {
         Schema::create('validasi_donasis', function (Blueprint $table) {
             $table->id();
-            $table->string('metode');
+            $table->string('id_rekening');
             $table->boolean('validated');
             $table->timestamps();
         });

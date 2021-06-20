@@ -144,30 +144,27 @@
                     <div class="content-side">
                         <ul class="nav-main">
                             <li class="nav-main-item">
-                                <a class="nav-main-link active" href="/home">
-                                    <i class="nav-main-link-icon fa fa-rocket"></i>
+                                <a class="nav-main-link @if(\Request::is('home'))) active @endif" href="{{url('/home')}}">
+                                    <i class="nav-main-link-icon fa fa-home"></i>
                                     <span class="nav-main-link-name">Menu Utama</span>
-                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>
+{{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
                                 </a>
                             </li>
-                            <li class="nav-main-heading">Heading</li>
+                            <li class="nav-main-heading">Donatur</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                    <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                                    <span class="nav-main-link-name">Dropdown</span>
+                                <a class="nav-main-link @if(\Request::is('dashboard/daftardonatur'))) active @endif" href="{{url('dashboard/daftardonatur')}}">
+                                    <i class="nav-main-link-icon fa fa-user"></i>
+                                    <span class="nav-main-link-name">Daftar Donatur</span>
+{{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
                                 </a>
-                                <ul class="nav-main-submenu">
-                                    <li class="nav-main-item">
-                                        <a class="nav-main-link" href="javascript:void(0)">
-                                            <span class="nav-main-link-name">Link #1</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-main-item">
-                                        <a class="nav-main-link" href="javascript:void(0)">
-                                            <span class="nav-main-link-name">Link #2</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                            </li>
+                            <li class="nav-main-heading">Rekening</li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link @if(\Request::is('rekening'))) active @endif" href="{{url('rekening')}}">
+                                    <i class="nav-main-link-icon fa fa-user"></i>
+                                    <span class="nav-main-link-name">Atur Rekening</span>
+                                    {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
+                                </a>
                             </li>
                         </ul>
                     </div>

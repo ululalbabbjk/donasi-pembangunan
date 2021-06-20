@@ -135,7 +135,7 @@ MAIN CONTENT LAYOUT
             <div class="content-side">
                 <ul class="nav-main">
                     <li class="nav-main-item">
-                        <a class="nav-main-link active" href="{{url('/')}}">
+                        <a class="nav-main-link @if(\Request::is('/'))) active @endif" href="{{url('/')}}">
                             <i class="nav-main-link-icon fa fa-home"></i>
                             <span class="nav-main-link-name">Halaman Utama</span>
                         </a>
@@ -174,15 +174,21 @@ MAIN CONTENT LAYOUT
                 <div class="d-none d-lg-block">
                     <ul class="nav-main nav-main-horizontal nav-main-hover">
                         <li class="nav-main-item">
-                            <a class="nav-main-link active" href="{{url('/')}}">
+                            <a class="nav-main-link @if(\Request::is('/'))) active @endif" href="{{url('/')}}">
                                 <i class="nav-main-link-icon fa fa-home"></i>
                                 <span class="nav-main-link-name">Halaman Utama</span>
                             </a>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" href="javascript:void(0)">
+                            <a class="nav-main-link @if(\Request::is('galeri'))) active @endif" href="javascript:void(0)">
                                 <i class="nav-main-link-icon fa fa-images"></i>
                                 <span class="nav-main-link-name">Galeri Foto Pembangunan</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link @if(\Request::is('daftardonatur'))) active @endif" href="javascript:void(0)">
+                                <i class="nav-main-link-icon fa fa-images"></i>
+                                <span class="nav-main-link-name">Daftar Donatur</span>
                             </a>
                         </li>
                     </ul>

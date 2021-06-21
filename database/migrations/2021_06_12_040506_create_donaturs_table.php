@@ -21,6 +21,8 @@ class CreateDonatursTable extends Migration
             $table->string('no_telp')->nullable();
             $table->bigInteger('jumlah');
             $table->longText('pesan')->nullable();
+            $table->boolean('anonim')->default(false);
+            $table->boolean('validated')->default(false);
             $table->timestamps();
         });
     }

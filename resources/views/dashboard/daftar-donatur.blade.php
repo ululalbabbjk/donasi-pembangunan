@@ -13,7 +13,6 @@
 
     <!-- Page Content -->
     <div class="content">
-                <div class="block-content block-rounded">
                     <!-- DataTables init on table by adding .js-dataTable-full class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
                     <?php
                     /* @var \App\Models\Donatur[] $donaturs */
@@ -64,7 +63,6 @@
                         @endforeach
                         </tbody>
                     </table>
-                </div>
             </div>
     <!-- END Page Content -->
 @endsection

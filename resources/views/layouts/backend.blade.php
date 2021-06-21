@@ -166,6 +166,23 @@
                                     {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
                                 </a>
                             </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link @if(\Request::is('settings'))) active @endif" href="{{url('settings')}}">
+                                    <i class="nav-main-link-icon fa fa-money-bill"></i>
+                                    <span class="nav-main-link-name">Atur Target Donasi</span>
+                                    {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
+                                </a>
+                            </li>
+
+                            <li class="nav-main-heading">Gambar</li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link @if(\Request::is('gambar'))) active @endif" href="{{url('gambar')}}">
+                                    <i class="nav-main-link-icon fa fa-images"></i>
+                                    <span class="nav-main-link-name">Atur Gambar</span>
+                                    {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                     <!-- END Side Navigation -->
@@ -258,6 +275,8 @@ l                        </div>
         <script src="{{asset('assets/js/dashmix.core.min.js')}}"></script>
         <script src="{{asset('assets/js/dashmix.app.min.js')}}"></script>
         @livewireScripts
-        @yield('scripts')
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <x-livewire-alert::scripts />
+            @yield('scripts')
     </body>
 </html>

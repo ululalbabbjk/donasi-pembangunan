@@ -5,7 +5,7 @@
     <div class="bg-body-light">
         <div class="content content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Daftar Rekening</h1>
+                <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Daftar Gambar</h1>
             </div>
         </div>
     </div>
@@ -14,29 +14,26 @@
     <!-- Page Content -->
     <div class="content">
         <!-- DataTables init on table by adding .js-dataTable-full class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
-        <?php
-        /* @var \App\Models\Rekening[] $rekenings */
-        ?>
         @if(session('pesan'))
-        <div class="row">
-            <div class="col-12">
-                <div class="alert alert-primary" role="alert">
-                    {{session('pesan')}}
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-primary" role="alert">
+                        {{session('pesan')}}
+                    </div>
                 </div>
             </div>
-        </div>
         @endif
         <div class="row">
             <div class="col-12">
-                <button type="button" class="btn btn-primary push" data-toggle="modal" data-target="#modal-tambah">Tambah Rekening</button>
+                <button type="button" class="btn btn-primary push" data-toggle="modal" data-target="#modal-tambah">Tambah Gambar</button>
             </div>
         </div>
-        @livewire('rekening.table')
+        @livewire('gambar.table')
     </div>
     <!-- END Page Content -->
 
     <!-- Modal Tambah -->
-    @livewire('rekening.tambah')
+    @livewire('gambar.tambah')
 @endsection
 
 @section('scripts')

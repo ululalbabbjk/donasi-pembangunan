@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Donatur;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $donaturs = Donatur::take(12)->get();
+    $jumlah = Donatur::sum('jumlah');
+    return view('welcome',compact('donaturs','jumlah'));
 })->name('halaman_utama');
 
 Auth::routes(['register' => false]);
@@ -27,3 +30,6 @@ Route::resource('donasi',\App\Http\Controllers\Donasi::class);
 Route::get("/donasi/validate/{id}",[\App\Http\Controllers\Donasi::class,'validateDonation']);
 
 Route::resource('rekening',\App\Http\Controllers\Rekening::class);
+Route::resource('gambar',\App\Http\Controllers\Gambar::class);
+Route::get('/settings',[\App\Http\Controllers\Settings::class,'index']);
+Route::post('/settings',[\App\Http\Controllers\Settings::class,'inputTarget']);

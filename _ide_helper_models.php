@@ -21,6 +21,8 @@ namespace App\Models{
  * @property string|null $no_telp
  * @property int $jumlah
  * @property string|null $pesan
+ * @property int $anonim
+ * @property int $validated
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Database\Factories\DonaturFactory factory(...$parameters)
@@ -28,6 +30,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur query()
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereAlamat($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereAnonim($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereId($value)
@@ -36,8 +39,30 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereNoTelp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur wherePesan($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Donatur whereValidated($value)
  */
 	class Donatur extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Gambar
+ *
+ * @property int $id
+ * @property string $nama_gambar
+ * @property string $nama_file
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar whereNamaFile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar whereNamaGambar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gambar whereUpdatedAt($value)
+ */
+	class Gambar extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -63,6 +88,26 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Rekening whereUpdatedAt($value)
  */
 	class Rekening extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Settings
+ *
+ * @property int $id
+ * @property int $target
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\SettingsFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Settings newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Settings newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Settings query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Settings whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Settings whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Settings whereTarget($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Settings whereUpdatedAt($value)
+ */
+	class Settings extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -100,18 +145,18 @@ namespace App\Models{
  * App\Models\ValidasiDonasi
  *
  * @property int $id
- * @property string $metode
- * @property int $validated
+ * @property string $id_rekening
+ * @property string|null $file
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi query()
  * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi whereFile($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi whereMetode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi whereIdRekening($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|ValidasiDonasi whereValidated($value)
  */
 	class ValidasiDonasi extends \Eloquent {}
 }

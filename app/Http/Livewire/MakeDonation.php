@@ -3,15 +3,18 @@
 namespace App\Http\Livewire;
 
 use App\Models\Donatur;
+use App\Models\Rekening;
 use App\Models\ValidasiDonasi;
 use Livewire\Component;
 
 class MakeDonation extends Component
 {
     public $jumlahDonasi, $nama=null, $alamat=null, $notelp=null, $email=null, $anonim=false,$doa=null, $metodePembayaran=null;
+    public $rekenings;
 
     public function render()
     {
+        $this->rekenings = Rekening::all();
         return view('livewire.make-donation');
     }
 
@@ -49,11 +52,13 @@ class MakeDonation extends Component
             $donatur->no_telp = $this->notelp;
             $donatur->jumlah = $this->jumlahDonasi;
             $donatur->pesan = $this->doa;
+            $donatur->anonim = $this->anonim;
+            $donatur->validated = false;
             $donatur->save();
             $validasi = new ValidasiDonasi();
             $validasi->id = $donatur->id;
-            $validasi->metode = $this->metodePembayaran;
-            $validasi->validated = false;
+            $validasi->id_rekening = $this->metodePembayaran;
+            $validasi->file = null;
             if($validasi->save()){
                 return redirect('/donasi/validate/'.$donatur->id);
             }

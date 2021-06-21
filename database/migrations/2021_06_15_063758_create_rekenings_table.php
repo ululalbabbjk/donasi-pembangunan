@@ -18,6 +18,7 @@ class CreateRekeningsTable extends Migration
             $table->string('nama');
             $table->string('jenis');
             $table->string('no_rekening')->nullable();
+            $table->string('atas_nama');
             $table->bigInteger('saldo');
             $table->timestamps();
         });

@@ -16,19 +16,19 @@
                                     Mari kita dukung bersama perjuangan Pesantren Ulul Albab dalam memenuhi hak-hak anak yatim
                                     dan duafa terutama dalam penyediaan pendidikan yang layak dan berkualitas.                                </p>
                                 <p class="font-size-h2 mb-2 js-appear-enabled animated fadeIn" data-toggle="appear">
-                                    Rp. 10.000
+                                    Rp. {{number_format($jumlah,0,',','.')}}
                                 </p>
                                 <p class="font-size-h6 font-w300 text-muted mb-2 js-appear-enabled animated fadeIn" data-toggle="appear">
                                     terkumpul dari target <b>Rp. 100.000.000</b>
                                 </p>
                                 <div class="progress push">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 10%;" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">
-                                        <span class="font-size-sm font-w600">{{ceil(10000/100000000)}}%</span>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: {{($jumlah/100000000)*100}}%;" aria-valuenow="{{($jumlah/100000000)*100}}" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="font-size-sm font-w600">{{($jumlah/100000000)*100}}%</span>
                                     </div>
                                 </div>
                                 <span class="d-inline-block">
                                                 <a class="btn btn-primary px-3 py-2" href="{{url('/donasi')}}">
-                                                    <i class="fa fa-fw fa-link mr-1"></i> Donasi Sekarang
+                                                    <i class="fa fa-fw fa-money-check mr-1"></i> Donasi Sekarang
                                                 </a>
                                             </span>
                             </div>
@@ -95,9 +95,30 @@
 {{--                    --}}
 {{--                </p>--}}
             </div>
-        </div>
     </div>
     <!-- END Section #1 -->
+    <div class="bg-white">
+        <div class="content content-full">
+            <div class="row">
+                <?php
+                /* @var \App\Models\Donatur[] $donaturs */
+                ?>
+                @foreach($donaturs as $donatur)
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="block block-rounded block-fx-shadow">
+                        <div class="block-header block-header-default">
+                            <h3 class="block-title">{{$donatur->nama}}</h3>
+                            <small>Rp. {{number_format($donatur->jumlah,0,',','.')}}</small>
+                        </div>
+                        <div class="block-content">
+                            <p>{{$donatur->pesan}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('endscript')

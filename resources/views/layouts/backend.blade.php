@@ -158,6 +158,13 @@
 {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
                                 </a>
                             </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link @if(\Request::is('validate'))) active @endif" href="{{url('validate')}}">
+                                    <i class="nav-main-link-icon fa fa-check-square"></i>
+                                    <span class="nav-main-link-name">Validasi Donasi</span>
+                                    {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
+                                </a>
+                            </li>
                             <li class="nav-main-heading">Rekening</li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link @if(\Request::is('rekening'))) active @endif" href="{{url('rekening')}}">

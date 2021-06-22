@@ -14,11 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $donaturs = Donatur::take(12)->get();
-    $jumlah = Donatur::sum('jumlah');
-    return view('welcome',compact('donaturs','jumlah'));
-})->name('halaman_utama');
+Route::get('/', [\App\Http\Controllers\Front::class,'index'])->name('halaman_utama');
 
 Auth::routes(['register' => false]);
 
@@ -33,3 +29,7 @@ Route::resource('rekening',\App\Http\Controllers\Rekening::class);
 Route::resource('gambar',\App\Http\Controllers\Gambar::class);
 Route::get('/settings',[\App\Http\Controllers\Settings::class,'index']);
 Route::post('/settings',[\App\Http\Controllers\Settings::class,'inputTarget']);
+
+Route::get('/validate',[\App\Http\Controllers\Donasi::class,'be_validate']);
+Route::get('/galery',[\App\Http\Controllers\Front::class,'galery']);
+Route::get('/daftardonatur',[\App\Http\Controllers\Front::class,'daftardonatur']);

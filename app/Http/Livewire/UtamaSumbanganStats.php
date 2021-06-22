@@ -11,8 +11,8 @@ class UtamaSumbanganStats extends Component
 
     public function render()
     {
-        $this->totalSumbangan = Donatur::sum('jumlah');
-        $this->jumlahOrang = Donatur::count();
+        $this->totalSumbangan = Donatur::whereValidated(true)->sum('jumlah');
+        $this->jumlahOrang = Donatur::whereValidated(true)->count();
         return view('livewire.utama-sumbangan-stats');
     }
 }

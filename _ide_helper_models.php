@@ -25,6 +25,7 @@ namespace App\Models{
  * @property int $validated
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\ValidasiDonasi|null $validasidonasi
  * @method static \Database\Factories\DonaturFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Donatur newQuery()
@@ -73,12 +74,14 @@ namespace App\Models{
  * @property string $nama
  * @property string $jenis
  * @property string|null $no_rekening
+ * @property string $atas_nama
  * @property int $saldo
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Rekening newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Rekening newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Rekening query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Rekening whereAtasNama($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Rekening whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Rekening whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Rekening whereJenis($value)
@@ -98,7 +101,6 @@ namespace App\Models{
  * @property int $target
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Database\Factories\SettingsFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Settings newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Settings newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Settings query()

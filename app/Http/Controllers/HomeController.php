@@ -28,7 +28,7 @@ class HomeController extends Controller
     }
 
     public function daftarDonatur(){
-        $donaturs = Donatur::all();
+        $donaturs = Donatur::whereValidated(true)->get();
         return view('dashboard.daftar-donatur',compact('donaturs'));
     }
 }

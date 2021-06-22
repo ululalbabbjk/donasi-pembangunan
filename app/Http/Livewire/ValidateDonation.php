@@ -6,10 +6,16 @@ use App\Models\Donatur;
 use App\Models\Rekening;
 use App\Models\ValidasiDonasi;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class ValidateDonation extends Component
 {
-    public $validasi, $rekening,$donatur,$id_donasi;
+    use WithFileUploads;
+    /**
+     * @var ValidasiDonasi $validasi
+     */
+    public $validasi;
+    public $rekening,$donatur,$id_donasi,$filevalidasi;
 
     public function render()
     {
@@ -18,5 +24,11 @@ class ValidateDonation extends Component
         $this->rekening = Rekening::whereId($this->validasi->id_rekening)->first();
 
         return view('livewire.validate-donation');
+    }
+
+    public function submitValidate(){
+        $this->validasi->file = $this->filevalidasi->store('gambar','public');
+        $this->validasi->save();
+        return $this->redirect('/donasi/validate/'.$this->validasi->id);
     }
 }

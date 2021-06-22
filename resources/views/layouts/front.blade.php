@@ -141,8 +141,8 @@ MAIN CONTENT LAYOUT
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="javascript:void(0)">
-                            <i class="nav-main-link-icon fa fa-rocket"></i>
+                        <a class="nav-main-link" @if(\Request::is('galeri'))) active @endif href="{{url('galeri')}}">
+                            <i class="nav-main-link-icon fa fa-images"></i>
                             <span class="nav-main-link-name">Galeri Foto Pembangunan</span>
                         </a>
                     </li>
@@ -180,14 +180,14 @@ MAIN CONTENT LAYOUT
                             </a>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link @if(\Request::is('galeri'))) active @endif" href="javascript:void(0)">
+                            <a class="nav-main-link @if(\Request::is('galery'))) active @endif" href="{{url('/galery')}}">
                                 <i class="nav-main-link-icon fa fa-images"></i>
                                 <span class="nav-main-link-name">Galeri Foto Pembangunan</span>
                             </a>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link @if(\Request::is('daftardonatur'))) active @endif" href="javascript:void(0)">
-                                <i class="nav-main-link-icon fa fa-images"></i>
+                            <a class="nav-main-link @if(\Request::is('daftardonatur'))) active @endif" href="{{url('/daftardonatur')}}">
+                                <i class="nav-main-link-icon fa fa-user"></i>
                                 <span class="nav-main-link-name">Daftar Donatur</span>
                             </a>
                         </li>

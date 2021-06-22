@@ -18,12 +18,24 @@
                 <div class="text-center h3">Sejumlah : Rp. {{number_format($donatur->jumlah,0,',','.')}}</div>
             </div>
         </div>
-{{--        TODO IMPLEMENT THIS--}}
-{{--        <div class="row">--}}
-{{--            <div class="form-group">--}}
-{{--                <input type="file" id="bukti" class=""></div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
+        <hr>
+        <div class="row">
+            @if($validasi->file == null)
+            <div class="h5">Bantu kami memvalidasi donasi anda. Silahkan upload bukti transfer anda untuk kami validasi.</div>
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="form-group">
+                    <label for="bukti">Bukti Transfer</label>
+                    <input type="file" id="bukti" name="bukti" accept="image/*" wire:model="filevalidasi">
+                </div>
+                <div class="form-group">
+                    <button type="button" wire:loading.attr="disabled" wire:click="submitValidate" class="btn btn-primary">Kirim bukti transfer</button>
+                </div>
+                <div wire:loading>Uploading...</div>
+            </div>
+            @else
+            <div class="h5">Terimakasih sudah mengirimkan bukti transfer anda. Kami akan memvalidasi donasi anda beberapa saat.</div>
+                @endif
+        </div>
             @endif
     </div>
 

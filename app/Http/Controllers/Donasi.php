@@ -87,4 +87,9 @@ class Donasi extends Controller
     {
         //
     }
+
+    public function be_validate()
+    {
+        return view('dashboard.validasi.index');
+    }
 }

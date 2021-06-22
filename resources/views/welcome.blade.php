@@ -1,6 +1,9 @@
 @extends('layouts.front')
 
 @section('container')
+    <?php
+    /* @var \App\Models\Gambar[] $gambars */
+    ?>
     <!-- Hero -->
     <div class="bg-image" style="background-image: url('assets/media/photos/awal.jpg');">
         <div class="hero hero-lg bg-white-90 overflow-hidden">
@@ -36,15 +39,11 @@
                         <div class="col-lg-6 offset-lg-1 d-none d-lg-block">
 {{--                            <img class="img-fluid" src="assets/media/various/promo_dashboard_default.png" srcset="assets/media/various/promo_dashboard_default@2x.png 2x"  alt="Hero Promo">--}}
                                 <div class="js-slider" data-dots="true" data-autoplay="true" data-autoplay-speed="3000">
+                                    @foreach($gambars as $gambar)
                                     <div>
-                                        <img class="img-fluid" src="assets/media/photos/awal.jpg" alt="">
+                                        <img class="img-fluid" src="{{asset('storage/'.$gambar->nama_file)}}" alt="">
                                     </div>
-                                    <div>
-                                        <img class="img-fluid" src="assets/media/photos/awal.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <img class="img-fluid" src="assets/media/photos/awal.jpg" alt="">
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <!-- END Slider with dots -->
                         </div>
@@ -63,15 +62,11 @@
     <div class="row d-lg-none pt-5">
         <div class="col-12 text-center">
             <div class="js-slider" data-dots="true" data-autoplay="true" data-autoplay-speed="3000">
-                <div>
-                    <img class="img-fluid" src="assets/media/photos/awal.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-fluid" src="assets/media/photos/awal.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-fluid" src="assets/media/photos/awal.jpg" alt="">
-                </div>
+                @foreach($gambars as $gambar)
+                    <div>
+                        <img class="img-fluid" src="{{asset('storage/'.$gambar->nama_file)}}" alt="">
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -107,7 +102,7 @@
                 <div class="col-12 col-md-6 col-xl-4">
                     <div class="block block-rounded block-fx-shadow">
                         <div class="block-header block-header-default">
-                            <h3 class="block-title">{{$donatur->nama}}</h3>
+                            <h3 class="block-title">{{$donatur->anonim ? 'Hamba Allah' : $donatur->nama}}</h3>
                             <small>Rp. {{number_format($donatur->jumlah,0,',','.')}}</small>
                         </div>
                         <div class="block-content">

@@ -8,7 +8,6 @@
 
     <meta name="description" content="Bantu Pembangunan Pesantren Ulul Albab Bojongkoneng &amp; Pondok Pesantren Ulul Albab Bojongkoneng">
     <meta name="author" content="Pondok Pesantren Ulul Albab Bojongkoneng">
-    <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph Meta -->
     <meta property="og:title" content="Bantu Pembangunan Pesantren Ulul Albab Bojongkoneng - Pondok Pesantren Ulul Albab Bojongkoneng">
@@ -141,9 +140,15 @@ MAIN CONTENT LAYOUT
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" @if(\Request::is('galeri'))) active @endif href="{{url('galeri')}}">
+                        <a class="nav-main-link @if(\Request::is('galery'))) active @endif" href="{{url('/galery')}}">
                             <i class="nav-main-link-icon fa fa-images"></i>
                             <span class="nav-main-link-name">Galeri Foto Pembangunan</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link @if(\Request::is('daftardonatur'))) active @endif" href="{{url('/daftardonatur')}}">
+                            <i class="nav-main-link-icon fa fa-user"></i>
+                            <span class="nav-main-link-name">Daftar Donatur</span>
                         </a>
                     </li>
                 </ul>
@@ -256,7 +261,11 @@ MAIN CONTENT LAYOUT
                         Jl. Bojongkoneng Atas No.6 Kp. Pagersari RT.04 RW.20
                         <br>
                         Kel. Cibeunying Kec. Cimenyan Kab. Bandung<br>
-                        <abbr title="Phone">P:</abbr> 085722620683
+                        <abbr title="Phone">Telepon:</abbr> <a href="tel:087824422385">087824422385</a> :
+                        <abbr title="Phone"></abbr> <a href="tel:085722620683">085722620683</a>
+                        <br>
+                        <abbr title="Phone">Whatsapp:</abbr> <a href="wa.me/087824422385">087824422385</a> :
+                        <abbr title="Phone"></abbr> <a href="wa.me/085722620683">085722620683</a>
                     </div>
                 </div>
             </div>

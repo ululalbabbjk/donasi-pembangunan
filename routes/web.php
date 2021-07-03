@@ -33,3 +33,4 @@ Route::post('/settings',[\App\Http\Controllers\Settings::class,'inputTarget']);
 Route::get('/validate',[\App\Http\Controllers\Donasi::class,'be_validate']);
 Route::get('/galery',[\App\Http\Controllers\Front::class,'galery']);
 Route::get('/daftardonatur',[\App\Http\Controllers\Front::class,'daftardonatur']);
+Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class,'logout']);

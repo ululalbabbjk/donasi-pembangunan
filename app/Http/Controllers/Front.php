@@ -17,7 +17,9 @@ class Front extends Controller
         $donaturs = Donatur::whereValidated(true)->take(12)->get();
         $jumlah = Donatur::whereValidated(true)->sum('jumlah');
         $gambars = \App\Models\Gambar::take(5)->get();
-        return view('welcome',compact('donaturs','jumlah','gambars'));
+        $t = \App\Models\Settings::whereId(1)->get();
+        $target = $t[0]->target;
+        return view('welcome',compact('donaturs','jumlah','gambars','target'));
     }
 
     public function daftardonatur()

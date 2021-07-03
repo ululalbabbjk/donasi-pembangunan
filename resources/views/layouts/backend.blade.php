@@ -227,11 +227,8 @@
                                     Konfigurasi Akun Login
                                 </div>
                                 <div class="p-2">
-                                    <a class="dropdown-item" href="javascript:void(0)">
-                                        <i class="far fa-fw fa-user mr-1"></i> Ubah Kata Sandi
-                                    </a>
                                     <div role="separator" class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="javascript:void(0)">
+                                    <a class="dropdown-item" href="{{url('logout')}}">
                                         <i class="far fa-fw fa-arrow-alt-circle-left mr-1"></i> Keluar
                                     </a>
                                 </div>

@@ -28,7 +28,9 @@
                     <input type="file" id="bukti" name="bukti" accept="image/*" wire:model="filevalidasi">
                 </div>
                 <div class="form-group">
-                    <button type="button" wire:loading.attr="disabled" wire:click="submitValidate" class="btn btn-primary">Kirim bukti transfer</button>
+                    <div wire:loading.remove @if($filevalidasi == null) style="display: none" @endif>
+                        <button type="button" wire:loading.attr="disabled" wire:click="submitValidate" class="btn btn-primary">Kirim bukti transfer</button>
+                    </div>
                 </div>
                 <div wire:loading>Uploading...</div>
             </div>

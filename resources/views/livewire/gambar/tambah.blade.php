@@ -24,7 +24,9 @@
                     <div wire:loading wire:target="file">Uploading...</div>
                     </div>
                 <div class="block-content block-content-full text-right bg-light">
-                    <button type="button" wire:loading.attr="disabled" data-dismiss="modal" wire:click="submitAdd" class="btn btn-sm btn-primary">Tambah</button>
+                    <div @if($file == null OR $nama == null OR $nama == "") style="display: none" @endif>
+                        <button type="button" data-dismiss="modal" wire:click="submitAdd" class="btn btn-sm btn-primary">Tambah</button>
+                    </div>
                 </div>
                 </form>
             </div>

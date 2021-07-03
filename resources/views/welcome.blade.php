@@ -16,13 +16,14 @@
                                     Bantu Pembangunan Pondok Pesantren Ulul Albab Bojongkoneng
                                 </h1>
                                 <p class="font-size-h5 font-w300 text-muted mb-2">
-                                    Mari kita dukung bersama perjuangan Pesantren Ulul Albab dalam memenuhi hak-hak anak yatim
+                                    Dengan Rp. 10.000 kita telah mendukung bersama perjuangan Pesantren Ulul Albab dalam memenuhi hak-hak anak yatim
                                     dan duafa terutama dalam penyediaan pendidikan yang layak dan berkualitas.                                </p>
                                 <p class="font-size-h2 mb-2 js-appear-enabled animated fadeIn" data-toggle="appear">
                                     Rp. {{number_format($jumlah,0,',','.')}}
                                 </p>
-                                <p class="font-size-h6 font-w300 text-muted mb-2 js-appear-enabled animated fadeIn" data-toggle="appear">
-                                    terkumpul dari target <b>Rp. 100.000.000</b>
+                                <p class="font-size-h5 font-w300 text-muted mb-2 js-appear-enabled animated fadeIn" data-toggle="appear">
+{{--                                    terkumpul dari target Rp. <b>{{number_format($target,0,',','.')}},00</b>--}}
+                                    <b>sudah terkumpul</b>
                                 </p>
                                 <div class="progress push">
                                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: {{($jumlah/100000000)*100}}%;" aria-valuenow="{{($jumlah/100000000)*100}}" aria-valuemin="0" aria-valuemax="100">
@@ -32,6 +33,11 @@
                                 <span class="d-inline-block">
                                                 <a class="btn btn-primary px-3 py-2" href="{{url('/donasi')}}">
                                                     <i class="fa fa-fw fa-money-check mr-1"></i> Donasi Sekarang
+                                                </a>
+                                            </span>
+                                <span class="d-inline-block mt-3">
+                                                <a class="btn btn-primary px-3 py-2" href="{{url('https://ululalbabbjk.com/index.php/rencana-peningkatan-fasilitas-pendidikan/')}}">
+                                                    <i class="fa fa-fw fa-book mr-1"></i> Rencana Anggaran
                                                 </a>
                                             </span>
                             </div>

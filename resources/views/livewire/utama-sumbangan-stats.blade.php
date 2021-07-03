@@ -1,7 +1,7 @@
 <div wire:poll class="block block-rounded block-fx-shadow">
     <div class="block-header block-header-default">
         <h3 class="block-title">
-            Jumlah Uang Sumbangan Masuk
+            Jumlah Donasi Masuk
         </h3>
         <div class="block-options">
             <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle"></button>

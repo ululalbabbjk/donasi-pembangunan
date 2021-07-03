@@ -29,9 +29,9 @@ class MakeDonation extends Component
         if($this->jumlahDonasi==null or $this->jumlahDonasi<=0){
             $this->addError('pesan','Maaf, silahkan masukkan jumlah donasi anda.');
         }
-        elseif(!is_int($this->jumlahDonasi)){
-            $this->addError('pesan','Maaf, jumlah donasi tidak valid');
-        }
+//        elseif(!is_int($this->jumlahDonasi)){
+//            $this->addError('pesan','Maaf, jumlah donasi tidak valid');
+//        }
         elseif($this->anonim==false AND ($this->nama==null OR $this->alamat==null)){
             $this->addError('pesan','Maaf, mohon isikan nama anda dan alamat anda.');
         }

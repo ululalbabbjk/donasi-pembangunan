@@ -17,7 +17,7 @@
                         </div>
                     </h2>
                     <h3 class="font-w300 text-muted mb-0 text-center">
-                        Tidak ada minimal nominal untuk berdonasi
+                        Tidak ada batas minimal untuk berdonasi
                     </h3>
                 </div>
             </div>

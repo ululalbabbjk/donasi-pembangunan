@@ -259,7 +259,7 @@
                             Dibuat oleh <a class="font-w600" href="https://github.com/kyrozyn">Andreas Rizki Rizaldi</a>
                         </div>
                         <div class="col-sm-6 order-sm-1 text-center text-sm-left">
-l                        </div>
+                        </div>
                     </div>
                 </div>
             </footer>

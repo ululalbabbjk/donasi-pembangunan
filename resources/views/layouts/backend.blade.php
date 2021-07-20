@@ -173,14 +173,6 @@
                                     {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
                                 </a>
                             </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link @if(\Request::is('settings'))) active @endif" href="{{url('settings')}}">
-                                    <i class="nav-main-link-icon fa fa-money-bill"></i>
-                                    <span class="nav-main-link-name">Atur Target Donasi</span>
-                                    {{--                                    <span class="nav-main-link-badge badge badge-pill badge-success">3</span>--}}
-                                </a>
-                            </li>
-
                             <li class="nav-main-heading">Gambar</li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link @if(\Request::is('gambar'))) active @endif" href="{{url('gambar')}}">

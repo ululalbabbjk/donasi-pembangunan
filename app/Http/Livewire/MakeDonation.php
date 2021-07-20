@@ -38,6 +38,9 @@ class MakeDonation extends Component
         elseif($this->anonim==true AND empty($this->nama)){
             $this->addError('pesan','Maaf, mohon isikan nama anda. Kami tidak akan menampilkan nama anda pada daftar Donatur');
         }
+        elseif($this->anonim==true AND empty($this->email)){
+            $this->addError('pesan','Maaf, mohon isikan email anda. Kami akan mengirimkan bukti donasi kepada email anda');
+        }
         elseif($this->doa==null){
             $this->addError('pesan','Maaf, mohon isikan doa anda');
         }

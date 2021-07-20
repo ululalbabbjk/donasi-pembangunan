@@ -27,8 +27,6 @@ Route::get("/donasi/validate/{id}",[\App\Http\Controllers\Donasi::class,'validat
 
 Route::resource('rekening',\App\Http\Controllers\Rekening::class);
 Route::resource('gambar',\App\Http\Controllers\Gambar::class);
-Route::get('/settings',[\App\Http\Controllers\Settings::class,'index']);
-Route::post('/settings',[\App\Http\Controllers\Settings::class,'inputTarget']);
 
 Route::get('/validate',[\App\Http\Controllers\Donasi::class,'be_validate']);
 Route::get('/galery',[\App\Http\Controllers\Front::class,'galery']);

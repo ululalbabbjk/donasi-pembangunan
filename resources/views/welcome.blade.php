@@ -25,11 +25,11 @@
 {{--                                    terkumpul dari target Rp. <b>{{number_format($target,0,',','.')}},00</b>--}}
                                     <b>sudah terkumpul</b>
                                 </p>
-                                <div class="progress push">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: {{($jumlah/100000000)*100}}%;" aria-valuenow="{{($jumlah/100000000)*100}}" aria-valuemin="0" aria-valuemax="100">
-                                        <span class="font-size-sm font-w600">{{($jumlah/100000000)*100}}%</span>
-                                    </div>
-                                </div>
+{{--                                <div class="progress push">--}}
+{{--                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: {{($jumlah/100000000)*100}}%;" aria-valuenow="{{($jumlah/100000000)*100}}" aria-valuemin="0" aria-valuemax="100">--}}
+{{--                                        <span class="font-size-sm font-w600">{{($jumlah/100000000)*100}}%</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                                 <span class="d-inline-block">
                                                 <a class="btn btn-primary px-3 py-2" href="{{url('/donasi')}}">
                                                     <i class="fa fa-fw fa-money-check mr-1"></i> Donasi Sekarang

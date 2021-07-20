@@ -68,6 +68,10 @@
                     <label for="example-text-input">Nama Lengkap</label>
                     <input type="text" wire:model="nama" class="form-control" id="nama" name="nama" placeholder="Silahkan isikan nama anda disini.">
                 </div>
+                <div class="form-group">
+                    <label for="example-text-input">E-Mail</label>
+                    <input type="text" wire:model="email" class="form-control" id="email" name="email" placeholder="Silahkan isikan email anda.">
+                </div>
                 <div class="{{$anonim ? "d-none" : "d-block"}}">
                     <div class="form-group">
                         <label for="example-text-input">Alamat</label>
@@ -76,10 +80,6 @@
                     <div class="form-group">
                         <label for="example-text-input">No Telepon</label>
                         <input type="text" wire:model="notelp" class="form-control" id="no_telp" name="no_telp" placeholder="Isian ini tidak wajib di isi.">
-                    </div>
-                    <div class="form-group">
-                        <label for="example-text-input">E-Mail</label>
-                        <input type="text" wire:model="email" class="form-control" id="email" name="email" placeholder="Isian ini tidak wajib di isi.">
                     </div>
                     <div class="form-group">
                         <div class="text-w200 text-muted mb-0 pt-1">

@@ -239,7 +239,7 @@ MAIN CONTENT LAYOUT
                     <h3 class="font-w300">Pondok Pesantren Ulul Albab Bojongkoneng</h3>
                     <ul class="list list-simple-mini">
                         <li>
-                            <a class="font-w600" href="https://ulabjk.daftarsantri.com">
+                            <a class="font-w600" href="https://ululalbabbjk.com">
                                 <i class="fa fa-fw fa-link text-primary-lighter mr-1"></i> Profil Pesantren
                             </a>
                         </li>
@@ -249,8 +249,8 @@ MAIN CONTENT LAYOUT
                             </a>
                         </li>
                         <li>
-                            <a class="font-w600" href="javascript:void(0)">
-                                <i class="fa fa-fw fa-link text-primary-lighter mr-1"></i> Berita Pesantren
+                            <a class="font-w600" href="https://ululalbabbjk.com/index.php/ceritasantri/">
+                                <i class="fa fa-fw fa-link text-primary-lighter mr-1"></i> Cerita Santri
                             </a>
                         </li>
                     </ul>

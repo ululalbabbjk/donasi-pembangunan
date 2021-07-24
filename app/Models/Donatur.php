@@ -12,4 +12,8 @@ class Donatur extends Model
     public function validasidonasi(){
         return $this->hasOne(ValidasiDonasi::class,'id');
     }
+
+    public function balasanpesan(){
+        return $this->hasOne(BalasanPesan::class,'id');
+    }
 }

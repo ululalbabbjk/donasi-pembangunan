@@ -94,13 +94,13 @@
                 <div class="h4">Metode Pembayaran Donasi Anda</div>
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-12 col-md-6 mb-3 mb-md-0">
-                            @foreach($rekenings as $rekening)
+                        @foreach($rekenings as $rekening)
+                        <div class="col-12 col-md-6 mb-3 mb-md-0 pt-xl-3">
                                 <div class="custom-control custom-block custom-control-success">
                                 <input type="radio" class="custom-control-input" id="{{$rekening->id}}" name="metode" value="{{$rekening->id}}" wire:model="metodePembayaran">
                                 <label class="custom-control-label" for="{{$rekening->id}}">
                                                     <span class="d-block text-center">
-                                                        <i class="fa fa-money-check fa-2x mb-2 text-black-50"></i><br>
+                                                        <i class="fa @if($rekening->jenis == "QRIS") fa-qrcode @else fa-money-check @endif fa-2x mb-2 text-black-50"></i><br>
                                                         {{$rekening->nama}}
                                                     </span>
                                 </label>
@@ -108,8 +108,8 @@
                                                     <i class="fa fa-check"></i>
                                                 </span>
                             </div>
-                            @endforeach
                         </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="form-group">

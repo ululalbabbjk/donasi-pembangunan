@@ -9,9 +9,13 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-primary text-center h3">{{$rekening->nama}}</div>
-                <div class="text-center h1">{{$rekening->no_rekening}}</div>
+                @if($rekening->jenis == "QRIS")
+                    <div class="text-center"><img style="height: 500px" class="img-fluid" src="/storage/{{$rekening->no_rekening}}"> </div>
+                @else
+                    <div class="text-center h1">{{$rekening->no_rekening}}</div>
+                @endif
             </div>
-            <div class="col-12">
+            <div class="col-12 pt-3">
                 <div class="text-center h3">Atas Nama : {{$rekening->atas_nama}}</div>
             </div>
             <div class="col-12">

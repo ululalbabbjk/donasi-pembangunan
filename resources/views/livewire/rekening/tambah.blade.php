@@ -23,10 +23,17 @@
                             <option value="QRIS">QRIS</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="norek">No Rekening</label>
-                        <input type="tel" class="form-control" id="norek" name="norek" placeholder="No Rekening" wire:model="norek">
-                    </div>
+                    @if($jenis != "QRIS")
+                        <div class="form-group">
+                            <label for="norek">No Rekening</label>
+                            <input type="tel" class="form-control" id="norek" name="norek" placeholder="No Rekening" wire:model="norek">
+                        </div>
+                    @else
+                        <div class="form-group">
+                            <label for="file">File Gambar Qr</label>
+                            <input type="file" class="form-control" id="file" name="file" wire:model="fileqr">
+                        </div>
+                    @endif
                     <div class="form-group">
                         <label for="atasnama">Atas Nama</label>
                         <input type="text" class="form-control" id="atasnama" name="atasnama" placeholder="Atas Nama" wire:model="atasnama">

@@ -6,13 +6,13 @@
 
     <title>{{$title ?? 'Mari bersedekah untuk anak-anak yatim dan dhuafa'}} - Pondok Pesantren Ulul Albab Bojongkoneng</title>
 
-    <meta name="description" content="Bantu Pembangunan Pesantren Ulul Albab Bojongkoneng &amp; Pondok Pesantren Ulul Albab Bojongkoneng">
+    <meta name="description" content="Mari bersedekah untuk anak-anak yatim dan dhuafa &amp; Pondok Pesantren Ulul Albab Bojongkoneng">
     <meta name="author" content="Pondok Pesantren Ulul Albab Bojongkoneng">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Bantu Pembangunan Pesantren Ulul Albab Bojongkoneng - Pondok Pesantren Ulul Albab Bojongkoneng">
+    <meta property="og:title" content="Mari bersedekah untuk anak-anak yatim dan dhuafa - Pondok Pesantren Ulul Albab Bojongkoneng">
     <meta property="og:site_name" content="Pondok Pesantren Ulul Albab Bojongkoneng">
-    <meta property="og:description" content="Bantu Pembangunan Pesantren Ulul Albab Bojongkoneng &amp; Pondok Pesantren Ulul Albab Bojongkoneng">
+    <meta property="og:description" content="Mari bersedekah untuk anak-anak yatim dan dhuafa &amp; Pondok Pesantren Ulul Albab Bojongkoneng">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="">

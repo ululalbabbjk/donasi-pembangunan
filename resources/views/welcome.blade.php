@@ -13,7 +13,7 @@
                         <div class="col-lg-5 text-center text-lg-left d-lg-flex align-items-lg-center">
                             <div>
                                 <h1 class="h32 font-w700 mb-3">
-                                    Bantu Pembangunan Pondok Pesantren Ulul Albab Bojongkoneng
+                                    Mari bersedekah untuk anak-anak yatim dan dhuafa
                                 </h1>
                                 <p class="font-size-h5 font-w300 text-muted mb-2">
                                     Dengan Rp. 10.000 kita telah mendukung bersama perjuangan Pesantren Ulul Albab dalam memenuhi hak-hak anak yatim
